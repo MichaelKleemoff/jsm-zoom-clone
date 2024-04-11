@@ -5,6 +5,7 @@ import React from 'react';
 import { sidebarLinks } from '@/constants';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
@@ -28,7 +29,12 @@ const Sidebar = () => {
 								}
 							)}
 						>
-							{link.label}
+							<Image
+								src={link.imgUrl}
+								alt={link.label}
+								width={24}
+								height={24}
+							/>
 						</Link>
 					);
 				})}
