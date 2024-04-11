@@ -23,15 +23,10 @@ const MobileNav = () => {
 						className='cursor-pointer sm:hidden'
 					/>
 				</SheetTrigger>
-				<SheetContent>
-					<SheetHeader>
-						<SheetTitle>Are you absolutely sure?</SheetTitle>
-						<SheetDescription>
-							This action cannot be undone. This will permanently delete your
-							account and remove your data from our servers.
-						</SheetDescription>
-					</SheetHeader>
-				</SheetContent>
+				<SheetContent
+					side='left'
+					className='border-none bg-dark-1'
+				></SheetContent>
 			</Sheet>
 		</section>
 	);
