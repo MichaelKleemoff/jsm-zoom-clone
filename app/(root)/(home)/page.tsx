@@ -9,6 +9,10 @@ const Home = () => {
 					<h2 className='glassmorphism max-w-[270px] rounded py-2 text-center text-base font-normal'>
 						Upcoming Meeting: 12:30 PM
 					</h2>
+					<div className='flex flex-col gap-2'>
+						<h1>1:20 PM</h1>
+						<p>Friday, April 12, 2024</p>
+					</div>
 				</div>
 			</div>
 		</section>
