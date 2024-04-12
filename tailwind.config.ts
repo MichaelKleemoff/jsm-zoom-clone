@@ -27,6 +27,9 @@ const config = {
 					1: '#0E78F9',
 				},
 			},
+			backgroundImage: {
+				hero: "url('/images/hero-background.png')",
+			},
 			keyframes: {
 				'accordion-down': {
 					from: { height: '0' },
