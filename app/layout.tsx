@@ -20,6 +20,9 @@ export default function RootLayout({
 			{/* Clerk has its own way of styling. First, access the `appearance` object and then apply your own customizations. */}
 			<ClerkProvider
 				appearance={{
+					layout: {
+						logoImageUrl: '/icons/yoom-logo.svg',
+					},
 					variables: {
 						colorText: '#fff',
 						colorPrimary: '#0E78F9',
