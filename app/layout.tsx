@@ -17,7 +17,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<ClerkProvider appearance={}>
+			{/* Clerk has its own way of styling. First, access the `appearance` object and then apply your own customizations. */}
+			<ClerkProvider
+				appearance={{
+					variables: {
+						colorText: '#fff',
+						colorPrimary: '#0E78F9',
+					},
+				}}
+			>
 				<body className={`${inter.className} bg-dark-2`}>{children}</body>
 			</ClerkProvider>
 		</html>
