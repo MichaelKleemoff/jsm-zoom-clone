@@ -24,6 +24,7 @@ export default function RootLayout({
 						colorText: '#fff',
 						colorPrimary: '#0E78F9',
 						colorBackground: '#1C1F2E',
+						colorInputBackground: '#252A41',
 					},
 				}}
 			>
