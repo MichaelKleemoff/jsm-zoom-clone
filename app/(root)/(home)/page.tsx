@@ -10,7 +10,7 @@ const Home = () => {
 						Upcoming Meeting: 12:30 PM
 					</h2>
 					<div className='flex flex-col gap-2'>
-						<h1>1:20 PM</h1>
+						<h1 className='text-4xl font-extrabold lg:text-7xl'>1:20 PM</h1>
 						<p>Friday, April 12, 2024</p>
 					</div>
 				</div>
