@@ -1,5 +1,6 @@
 'use server';
 import { currentUser } from '@clerk/nextjs/server';
+import { StreamClient } from '@stream-io/node-sdk';
 
 // Code here will only be run on the server.
 
@@ -14,5 +15,5 @@ export const tokenProvider = async () => {
 	if (!apiKey) throw new Error('No API key');
 	if (!apiSecret) throw new Error('No API secret');
 
-	const streamClient = new streamClient();
+	const client = new StreamClient(apiKey, apiSecret);
 };
