@@ -7,10 +7,15 @@ const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
 	const [videoClient, setVideoClient] = useState<StreamVideoClient>();
 
-	// Get `user` from Clerk
+	// Get `user` from `@clerk/nextjs`
 	const { user, isLoaded } = useUser();
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		// If user isn't loaded or doesn't exist, exit out of the function.
+		if (!isLoaded || !user) return;
+		// If we don't have the `apiKey`, throw an error
+		if (!apiKey) throw new Error('Stream API key missing');
+	}, [user, isLoaded]);
 
 	return <StreamVideo client={videoClient}></StreamVideo>;
 };
