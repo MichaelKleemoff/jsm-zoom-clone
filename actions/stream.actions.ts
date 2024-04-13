@@ -16,4 +16,7 @@ export const tokenProvider = async () => {
 	if (!apiSecret) throw new Error('No API secret');
 
 	const client = new StreamClient(apiKey, apiSecret);
+
+	// exp is optional (by default the token is valid for an hour)
+	const exp = Math.round(new Date().getTime() / 1000) + 60 * 60;
 };
