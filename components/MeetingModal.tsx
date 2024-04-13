@@ -1,6 +1,22 @@
 import React from 'react';
 
-const MeetingModal = () => {
+interface MeetingModalProps {
+	isOpen: boolean;
+	onClose: () => void;
+	title: string;
+	className: string;
+	buttonText: string;
+	handleClick: () => void;
+}
+
+const MeetingModal = ({
+	isOpen,
+	onClose,
+	title,
+	className,
+	buttonText,
+	handleClick,
+}: MeetingModalProps) => {
 	return <div>MeetingModal</div>;
 };
 
