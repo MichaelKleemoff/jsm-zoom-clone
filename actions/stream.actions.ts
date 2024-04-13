@@ -19,4 +19,10 @@ export const tokenProvider = async () => {
 
 	// exp is optional (by default the token is valid for an hour)
 	const exp = Math.round(new Date().getTime() / 1000) + 60 * 60;
+	const issued = Math.floor(Date.now() / 1000) - 60;
+
+	// Create new token
+	const token = client.createToken(user.id, exp, issued);
+
+	return token;
 };
