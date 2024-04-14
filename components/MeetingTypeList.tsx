@@ -15,7 +15,19 @@ const MeetingTypeList = () => {
 	const { user } = useUser();
 	const client = useStreamVideoClient();
 
-	const createMeeting = () => {};
+	const createMeeting = async () => {
+		// Guard clause for necessary requirements in order to create a meeting. If no `client` or `user`, then exit.
+		if (!client || !user) return;
+
+		try {
+			const id = crypto.randomUUID();
+			const call = client.call('default', id);
+
+			if (!call) throw new Error('Failed to create call');
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<section className='grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
