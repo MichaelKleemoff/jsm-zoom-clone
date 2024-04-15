@@ -26,6 +26,18 @@ const MeetingSetup = () => {
 		<div className='flex h-screen w-full flex-col items-center justify-center gap-3 text-white'>
 			<h1 className='text-2xl font-bold'>Setup</h1>
 			<VideoPreview />
+			<div className='flex h-16 items-center justify-center gap-3'>
+				<label className='flex items-center justify-center gap-2 font-medium'>
+					<input
+						type='checkbox'
+						checked={isMicCamToggledOn}
+						onChange={(e) => {
+							setIsMicCamToggledOn(e.target.checked);
+						}}
+					/>
+					Join with mic and camera off
+				</label>
+			</div>
 		</div>
 	);
 };
