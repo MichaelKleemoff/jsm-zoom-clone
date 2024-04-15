@@ -8,6 +8,10 @@ const MeetingSetup = () => {
 
 	const call = useCall();
 
+	if (!call) {
+		throw new Error('useCall must be used within Sreamcall component');
+	}
+
 	useEffect(() => {
 		if (isMicCamToggledOn) {
 			call?.camera.disable();
