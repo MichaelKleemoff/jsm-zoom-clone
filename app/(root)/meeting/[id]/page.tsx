@@ -8,7 +8,7 @@ import { useUser } from '@clerk/nextjs';
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react';
 
-const Meeting = ({ params: id }: { params: { id: string } }) => {
+const Meeting = ({ params: { id } }: { params: { id: string } }) => {
 	const { user, isLoaded } = useUser();
 	const [isSetupComplete, setIsSetupComplete] = useState(false);
 	const { call, isCallLoading } = useGetCallById(id);
@@ -18,7 +18,7 @@ const Meeting = ({ params: id }: { params: { id: string } }) => {
 	return (
 		<main className='h-screen w-full'>
 			{/* Which call are we currently in? Develop a custom hook. */}
-			<StreamCall call={}>
+			<StreamCall call={call}>
 				<StreamTheme>
 					{!isSetupComplete ? <MeetingSetup /> : <MeetingRoom />}
 				</StreamTheme>
