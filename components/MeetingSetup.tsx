@@ -1,3 +1,5 @@
+'use client';
+
 import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
 
