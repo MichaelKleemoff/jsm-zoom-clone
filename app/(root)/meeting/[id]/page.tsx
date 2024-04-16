@@ -20,7 +20,11 @@ const Meeting = ({ params: { id } }: { params: { id: string } }) => {
 			{/* Which call are we currently in? Develop a custom hook. */}
 			<StreamCall call={call}>
 				<StreamTheme>
-					{!isSetupComplete ? <MeetingSetup /> : <MeetingRoom />}
+					{!isSetupComplete ? (
+						<MeetingSetup setIsSetupComplete={setIsSetupComplete} />
+					) : (
+						<MeetingRoom />
+					)}
 				</StreamTheme>
 			</StreamCall>
 		</main>
