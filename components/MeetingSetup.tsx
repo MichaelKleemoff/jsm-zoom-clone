@@ -1,6 +1,10 @@
 'use client';
 
-import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
+import {
+	DeviceSettings,
+	VideoPreview,
+	useCall,
+} from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
 
 const MeetingSetup = () => {
@@ -37,6 +41,7 @@ const MeetingSetup = () => {
 					/>
 					Join with mic and camera off
 				</label>
+				<DeviceSettings />
 			</div>
 		</div>
 	);
