@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { PaginatedGridLayout, SpeakerLayout } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react';
 
@@ -28,7 +29,7 @@ const MeetingRoom = () => {
 				<div className='flex size-full max-w-[1000px] items-center'>
 					<CallLayout />
 				</div>
-				<div className='h-[calc(100vh-86px)] hidden ml-2'></div>
+				<div className={cn('h-[calc(100vh-86px)] hidden ml-2')}></div>
 			</div>
 		</section>
 	);
