@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// We can several layout styles. Define them as a `type` here.
+type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
+
 const MeetingRoom = () => {
 	const [layout, setLayout] = useState('speaker-left');
 
