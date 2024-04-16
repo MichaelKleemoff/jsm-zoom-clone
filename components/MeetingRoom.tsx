@@ -1,5 +1,9 @@
 import { cn } from '@/lib/utils';
-import { PaginatedGridLayout, SpeakerLayout } from '@stream-io/video-react-sdk';
+import {
+	CallParticipantsList,
+	PaginatedGridLayout,
+	SpeakerLayout,
+} from '@stream-io/video-react-sdk';
 import React, { useState } from 'react';
 
 // We can several layout styles. Define them as a `type` here.
@@ -29,7 +33,17 @@ const MeetingRoom = () => {
 				<div className='flex size-full max-w-[1000px] items-center'>
 					<CallLayout />
 				</div>
-				<div className={cn('h-[calc(100vh-86px)] hidden ml-2')}></div>
+				<div
+					className={cn('h-[calc(100vh-86px)] hidden ml-2', {
+						'show-block': showParticipants,
+					})}
+				>
+					<CallParticipantsList
+						onClose={() => {
+							setShowParticipants(false);
+						}}
+					/>
+				</div>
 			</div>
 		</section>
 	);
