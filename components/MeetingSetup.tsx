@@ -6,6 +6,7 @@ import {
 	useCall,
 } from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
+import { Button } from './ui/button';
 
 const MeetingSetup = () => {
 	const [isMicCamToggledOn, setIsMicCamToggledOn] = useState(false);
@@ -43,6 +44,7 @@ const MeetingSetup = () => {
 				</label>
 				<DeviceSettings />
 			</div>
+			<Button></Button>
 		</div>
 	);
 };
