@@ -64,7 +64,7 @@ const MeetingRoom = () => {
 				<DropdownMenu>
 					<div className='flex items-center'>
 						<DropdownMenuTrigger>
-							<LayoutList />
+							<LayoutList size={20} className='text-white' />
 						</DropdownMenuTrigger>
 					</div>
 
