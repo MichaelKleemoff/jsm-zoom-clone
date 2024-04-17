@@ -7,6 +7,15 @@ import {
 } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react';
 
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuLabel,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+
 // We can several layout styles. Define them as a `type` here.
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
@@ -49,6 +58,8 @@ const MeetingRoom = () => {
 
 			<div className='fixed bottom-0 flex w-full items-center justify-center gap-5'>
 				<CallControls />
+
+				{/* Dropdown menu */}
 			</div>
 		</section>
 	);
