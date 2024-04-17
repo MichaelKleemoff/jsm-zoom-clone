@@ -15,6 +15,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { LayoutList } from 'lucide-react';
 
 // We can several layout styles. Define them as a `type` here.
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
@@ -62,7 +63,9 @@ const MeetingRoom = () => {
 				{/* Dropdown menu */}
 				<DropdownMenu>
 					<div className='flex items-center'>
-						<DropdownMenuTrigger>Open</DropdownMenuTrigger>
+						<DropdownMenuTrigger>
+							<LayoutList />
+						</DropdownMenuTrigger>
 					</div>
 
 					<DropdownMenuContent>
