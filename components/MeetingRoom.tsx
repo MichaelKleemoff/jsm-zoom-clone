@@ -68,13 +68,8 @@ const MeetingRoom = () => {
 						</DropdownMenuTrigger>
 					</div>
 
-					<DropdownMenuContent>
-						<DropdownMenuLabel>My Account</DropdownMenuLabel>
+					<DropdownMenuContent className='border-dark-1 bg-dark-1 text-white'>
 						<DropdownMenuSeparator />
-						<DropdownMenuItem>Profile</DropdownMenuItem>
-						<DropdownMenuItem>Billing</DropdownMenuItem>
-						<DropdownMenuItem>Team</DropdownMenuItem>
-						<DropdownMenuItem>Subscription</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			</div>
