@@ -61,7 +61,10 @@ const MeetingRoom = () => {
 
 				{/* Dropdown menu */}
 				<DropdownMenu>
-					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
+					<div className='flex items-center'>
+						<DropdownMenuTrigger>Open</DropdownMenuTrigger>
+					</div>
+
 					<DropdownMenuContent>
 						<DropdownMenuLabel>My Account</DropdownMenuLabel>
 						<DropdownMenuSeparator />
