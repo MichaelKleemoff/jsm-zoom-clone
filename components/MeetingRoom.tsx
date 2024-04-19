@@ -73,15 +73,15 @@ const MeetingRoom = () => {
 							<div key={index}>
 								<DropdownMenuItem
 									className='cursor-pointer'
-									onClick={() => {
-										setLayout(item.toLowerCase() as CallLayoutType);
-									}}
+									onClick={() =>
+										setLayout(item.toLowerCase() as CallLayoutType)
+									}
 								>
 									{item}
 								</DropdownMenuItem>
+								<DropdownMenuSeparator className='border-dark-1' />
 							</div>
 						))}
-						<DropdownMenuSeparator />
 					</DropdownMenuContent>
 				</DropdownMenu>
 			</div>
