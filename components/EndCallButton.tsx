@@ -26,6 +26,7 @@ const EndCallButton = () => {
 				// Renavigate to the home page
 				router.push('/');
 			}}
+			className='bg-red-500'
 		>
 			End call for everyone
 		</Button>
