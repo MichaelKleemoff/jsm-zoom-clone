@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { LayoutList, Users } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
-import EndCallButton from './ui/EndCallButton';
+import EndCallButton from './EndCallButton';
 
 // We can several layout styles. Define them as a `type` here.
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
