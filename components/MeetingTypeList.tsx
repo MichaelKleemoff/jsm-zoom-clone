@@ -113,7 +113,7 @@ const MeetingTypeList = () => {
 						<label className='text-base text-normal leading-[22px] text-sky-2'>
 							Add a description
 						</label>
-						<Textarea />
+						<Textarea className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0' />
 					</div>
 				</MeetingModal>
 			) : (
