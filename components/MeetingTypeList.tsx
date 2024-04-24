@@ -120,6 +120,11 @@ const MeetingTypeList = () => {
 							}}
 						/>
 					</div>
+					<div className='flex w-full flex-col gap-2.5'>
+						<label className='text-base text-normal leading-[22px] text-sky-2'>
+							Select Date & Time
+						</label>
+					</div>
 				</MeetingModal>
 			) : (
 				<MeetingModal
