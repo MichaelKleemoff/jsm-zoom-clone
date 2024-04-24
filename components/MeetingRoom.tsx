@@ -3,8 +3,10 @@ import {
 	CallControls,
 	CallParticipantsList,
 	CallStatsButton,
+	CallingState,
 	PaginatedGridLayout,
 	SpeakerLayout,
+	useCallStateHooks,
 } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react';
 
@@ -12,13 +14,13 @@ import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
-	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { LayoutList, Users } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import EndCallButton from './EndCallButton';
+import Loader from './Loader';
 
 // We can several layout styles. Define them as a `type` here.
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
@@ -29,6 +31,10 @@ const MeetingRoom = () => {
 	const [layout, setLayout] = useState<CallLayoutType>('speaker-left');
 	const [showParticipants, setShowParticipants] = useState(false);
 
+	const { useCallCallingState } = useCallStateHooks();
+	const callingState = useCallCallingState();
+
+	if (callingState !== CallingState.JOINED) return <Loader />;
 	// Create a new functional component which will render a specific layout depending on the current layout state.
 	const CallLayout = () => {
 		switch (layout) {
