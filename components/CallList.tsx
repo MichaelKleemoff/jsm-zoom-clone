@@ -3,6 +3,7 @@
 import { useGetCalls } from '@/hooks/useGetCalls';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import MeetingCard from './MeetingCard';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 	const { endedCalls, upcomingCalls, callRecordings, isLoading } =
